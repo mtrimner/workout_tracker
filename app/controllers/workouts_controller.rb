@@ -49,7 +49,12 @@ class WorkoutsController < ApplicationController
         
         if logged_in?
             @workout = Workout.find(params[:id])
+            if @workout.user_id == current_user.id
             erb :"workouts/show"
+            else  
+                flash[:errors] = "That workout doesn't belong to you! Select one of your own workouts below."
+                redirect to '/workouts'
+            end
         else
             redirect to "/login"
         end
