@@ -1,0 +1,15 @@
+
+<form method="POST" action="/workouts/<%= @workout.id %>">
+<input type="hidden" id="hidden" name="_method" value="PATCH">
+<input type="text" name="name" value="<%=@workout.name%>">
+
+<% @workout.exercises.each do |exercise| %>
+
+<input type="hidden" name="exercise[id][]" value="<%=exercise.id%>">
+<input type="text" name="exercise[exercise_name][]" value="<%=exercise.exercise_name%>">
+<input type="text" name="exercise[notes][]" value="<%=exercise.notes%>">
+
+
+<%end%>
+<input type="submit" id="submit">
+</form>

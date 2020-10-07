@@ -18,6 +18,12 @@ ActiveRecord::Schema.define(version: 2020_10_05_043720) do
     t.integer "workout_id"
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+  end
+
   create_table "workouts", force: :cascade do |t|
     t.string "name"
     t.integer "user_id"

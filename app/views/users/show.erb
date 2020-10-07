@@ -1,0 +1,8 @@
+<% @user.workouts.each do |workout| %>
+
+<ul>
+<li><a href="/workouts/<%=workout.id%>"> <%= workout.name %> </a></li>
+
+<%end%>
+
+</ul>
