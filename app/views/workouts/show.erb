@@ -1,15 +1,15 @@
 
-<%= @workout.name %>
+<h3><%= @workout.name %></h3>
 
 <% @workout.exercises.each do |exercise| %>
 
 <ul>
-<li> <%=exercise.exercise_name %></li>
+<strong><li> <%=exercise.exercise_name %></li></strong>
 <li> <%=exercise.notes%> </li>
-
+</ul>
 <%end%>
 
-</ul>
+
 
 <a href="/workouts/new"> New Workout </a><br>
 <a href="/workouts/<%=@workout.id%>/edit"> Edit Workout </a>

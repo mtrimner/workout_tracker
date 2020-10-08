@@ -1,10 +1,18 @@
 
 <form action="/workouts"  method="POST">
-
-Workout Name:<input type="text" name="name"><br><br>
+<h3>Workout Name:</h3>
+<input type="text" name="name"><br>
+<br>
+<br>
+<strong>Enter the exercise name and notes below.</strong><br>
+<strong>Once your are done, hit submit at the bottom of the page.</strong><br>
+<br>
 <%10.times do%>
-Exercise Name:<input type="text" name="exercise[exercise_name][]"><br>
-Notes:<input type="text" name="exercise[notes][]"><br>
+Exercise Name<br>
+<input id="ex_name" type="text" name="exercise[exercise_name][]"><br>
+Notes:<br>
+<input id="notes" type="text" name="exercise[notes][]"><br>
+<br>
 <%end%>
 
 <input type="submit">
