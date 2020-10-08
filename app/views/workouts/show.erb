@@ -9,12 +9,13 @@
 </ul>
 <%end%>
 <br>
- <form method="POST" action="/workouts/<%= @workout.id %>">
+
+<a href="/workouts/<%=@workout.id%>/edit"><button class="button">Edit</button></a>
+
+ <form method="POST" action="/workouts/<%= @workout.id %>/delete">
         <input type="hidden" id="hidden" name="_method" value="DELETE">
-        <input type="submit" value="delete">
+        <input type="submit" value="Delete">
     </form>
-<br>
 
+<a href="/workouts/new"><button class="button">New Workout</button></a>
 
-<a href="/workouts/new"> New Workout </a> 
-<a href="/workouts/<%=@workout.id%>/edit"> Edit Workout </a>

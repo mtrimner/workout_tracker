@@ -59,11 +59,20 @@
     border: 3px solid #555;
   }
 
-  input[type=text] {
+  input[type=text], input[type=password] {
     width: 30%;
     display: inline-block;
     padding: 5px 10px;
     margin: 8px 0;
+  }
+
+  input[type=submit] {
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
   }
 
   ul {
@@ -73,6 +82,15 @@
     display:table;
     margin:5px auto 0px auto;
     width: 75%;
+  }
+
+  .button {
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
   }
 
   .main {

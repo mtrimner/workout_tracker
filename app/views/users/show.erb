@@ -1,8 +1,10 @@
+<h2>Create or select a workout from below!</h2>
+
+<a href="/workouts/new"><button class="button">New Workout</button></a>
+<br>
+<br>
 <% @user.workouts.each do |workout| %>
 
-<ul>
-<li><a href="/workouts/<%=workout.id%>"> <%= workout.name %> </a></li>
+<p>-<a href="/workouts/<%=workout.id%>"> <%= workout.name %></a></p>
 
 <%end%>
-
-</ul>
