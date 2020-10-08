@@ -8,8 +8,13 @@
 <li> <%=exercise.notes%> </li>
 </ul>
 <%end%>
+<br>
+ <form method="POST" action="/workouts/<%= @workout.id %>">
+        <input type="hidden" id="hidden" name="_method" value="DELETE">
+        <input type="submit" value="delete">
+    </form>
+<br>
 
 
-
-<a href="/workouts/new"> New Workout </a>
+<a href="/workouts/new"> New Workout </a> 
 <a href="/workouts/<%=@workout.id%>/edit"> Edit Workout </a>
