@@ -1,14 +1,17 @@
 
+<h2>Edit the workout below. Be sure not to leave any spaces blank.
+
+<h3>Workout Name</h3>
 <form method="POST" action="/workouts/<%= @workout.id %>">
 <input type="hidden" id="hidden" name="_method" value="PATCH">
-<input type="text" name="name" value="<%=@workout.name%>">
+<input type="text" name="name" value="<%=@workout.name%>"><br>
 
 <% @workout.exercises.each do |exercise| %>
-
+<ul>
 <input type="hidden" name="exercise[id][]" value="<%=exercise.id%>">
-<input type="text" name="exercise[exercise_name][]" value="<%=exercise.exercise_name%>">
-<input type="text" name="exercise[notes][]" value="<%=exercise.notes%>">
-
+<li>Exercise: <input type="text" name="exercise[exercise_name][]" value="<%=exercise.exercise_name%>"><br></li>
+<li>&nbsp; &nbsp; Notes: <input type="text" name="exercise[notes][]" value="<%=exercise.notes%>"><br></li>
+</ul>
 
 <%end%>
 <input type="submit" id="submit">
