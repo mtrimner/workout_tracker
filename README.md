@@ -9,9 +9,17 @@ Clone this repo to your local computer.
 
 You can see an easy step, by step, tutorial here: https://www.earthdatascience.org/workshops/intro-version-control-git/basic-git-commands/
 
-Then, run bundle install in the command line. 
+Then, run 
+```
+bundle install
+```
+ in the command line. 
 
-run shotgun to start your test server and enter localhost:9393 in your browser.
+run 
+```
+shotgun
+```
+to start your test server and enter localhost:9393 in your browser.
 
 # How To Run The Program
 
