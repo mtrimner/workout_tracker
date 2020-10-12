@@ -74,7 +74,7 @@ class WorkoutsController < ApplicationController
     end
 
     patch '/workouts/:id' do
-        if params[:name] == "" || params[:exercise][:exercise_name] == "" ||params  [:exercise][:notes] == ""
+        if params[:name] == ""
             flash[:errors] = "Can't have blank workout name!"
             redirect to "/workouts/#{params[:id]}/edit"
         else
@@ -88,7 +88,7 @@ class WorkoutsController < ApplicationController
                 redirect to "/workouts/#{params[:id]}/edit"
             else
                 @exercise = Exercise.find_by_id(params[:exercise][:id][i])
-                @exercise.update(exercise_name: en, notes: params[:exercise[:notes][i]) 
+                @exercise.update(exercise_name: en, notes: params[:exercise][:notes][i]) 
             end
         end
         redirect to "/workouts/#{params[:id]}"

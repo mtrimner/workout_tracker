@@ -33,6 +33,7 @@ class UsersController < ApplicationController
             session[:user_id] = @user.id
             redirect to "/workouts"
         else
+            flash[:errors] = "Incorrect Email or Password"
             redirect to "/login"
         end
     end
