@@ -1,6 +1,6 @@
 # WorkoutTracker
 
-Welcome to this Workout Tracker program. This project was developed as our second project for Flatiron Schools software engineering bootcamp. The goal of the project was to practice implementing an MVC with an ORM along with other concepts. It allows you to create create workouts and store them for later use. 
+Welcome to this Workout Tracker program. This project was developed as our second project for Flatiron Schools software engineering bootcamp. The goal of the project was to practice implementing a MVC with an ORM along with other concepts. It allows you to create create workouts and store them for later use. 
 
 
 # Installation
