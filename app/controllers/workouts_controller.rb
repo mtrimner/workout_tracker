@@ -2,21 +2,13 @@ class WorkoutsController < ApplicationController
 
     get '/workouts' do
         redirect_if_not_logged_in
-        # if logged_in?
         @user = User.find_by_id(session[:user_id])
         erb :"users/show"
-        # else  
-        #     redirect to "/login"
-        # end
     end
 
     get '/workouts/new' do
         redirect_if_not_logged_in
-        # if logged_in?
         erb :"workouts/new"
-        # else  
-        #     redirect to "/login"
-        # end
     end
 
     post '/workouts' do
@@ -44,7 +36,6 @@ class WorkoutsController < ApplicationController
     
     get '/workouts/:id' do
         redirect_if_not_logged_in
-        # if logged_in?
         @workout = Workout.find(params[:id])
         if @workout.user_id == current_user.id
         erb :"workouts/show"
@@ -52,14 +43,10 @@ class WorkoutsController < ApplicationController
             flash[:errors] = "That workout doesn't belong to you! Select oneof your own workouts below."
             redirect to '/workouts'
         end
-        # else
-        #     redirect to "/login"
-        # end
     end
 
     get '/workouts/:id/edit' do
         redirect_if_not_logged_in
-        # if logged_in?
         @workout = Workout.find_by_id(params[:id])
         if @workout && @workout.user == current_user
             @exercise = @workout.exercises
@@ -67,9 +54,7 @@ class WorkoutsController < ApplicationController
         else 
             redirect to "/workouts"
         end
-        # else
-        #     redirect to "/login"
-        # end
+       
 
     end
 

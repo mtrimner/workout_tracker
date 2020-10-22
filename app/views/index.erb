@@ -1,14 +1,15 @@
-<h1>Welcome! Create a new accout or log in below.</h1>
+
 
 <% if logged_in? %>
 
-<h2>Hello <%= current_user.name %></h2><br>
+<h1>Hello <%= current_user.name %></h1><br>
 
-<a href="/workouts"> View Workouts </a>
-<a href="/workouts/new"> New Workout </a>
-    <a href="/logout"> Log Out </a>
+    <a href="/workouts"><button class="button">View Workouts</button> </a><br>
+    <a href="/workouts/new"><button class="button">New Workout</button> </a><br>
+    <a href="/logout"><button class="button">Log Out</button> </a>
 
 <% else %>
+<h1>Welcome! Create a new accout or log in below.</h1>
 
     <a href="/signup"><button class="button">Sign Up</button></a><br>
     <a href="/login"><button class="button">Log In</button></a>
